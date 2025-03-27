@@ -93,7 +93,7 @@ CREATE TABLE @cdmDatabaseSchema.drug_exposure (
 			refills integer NULL,
 			quantity float NULL,
 			days_supply integer NULL,
-			sig varchar(MAX) NULL,
+			sig VARCHAR(8000) NULL,
 			route_concept_id integer NULL,
 			lot_number varchar(50) NULL,
 			provider_id integer NULL,
@@ -202,7 +202,7 @@ CREATE TABLE @cdmDatabaseSchema.note (
 			note_type_concept_id integer NOT NULL,
 			note_class_concept_id integer NOT NULL,
 			note_title varchar(250) NULL,
-			note_text varchar(MAX) NOT NULL,
+			note_text VARCHAR(8000) NOT NULL,
 			encoding_concept_id integer NOT NULL,
 			language_concept_id integer NOT NULL,
 			provider_id integer NULL,
@@ -378,7 +378,7 @@ CREATE TABLE @cdmDatabaseSchema.cdm_source (
 			cdm_source_name varchar(255) NOT NULL,
 			cdm_source_abbreviation varchar(25) NOT NULL,
 			cdm_holder varchar(255) NOT NULL,
-			source_description varchar(MAX) NULL,
+			source_description VARCHAR(8000) NULL,
 			source_documentation_reference varchar(255) NULL,
 			cdm_etl_reference varchar(255) NULL,
 			source_release_date date NOT NULL,
@@ -465,9 +465,9 @@ CREATE TABLE @cdmDatabaseSchema.cohort (
 CREATE TABLE @cdmDatabaseSchema.cohort_definition (
 			cohort_definition_id integer NOT NULL,
 			cohort_definition_name varchar(255) NOT NULL,
-			cohort_definition_description varchar(MAX) NULL,
+			cohort_definition_description VARCHAR(8000) NULL,
 			definition_type_concept_id integer NOT NULL,
-			cohort_definition_syntax varchar(MAX) NULL,
+			cohort_definition_syntax VARCHAR(8000) NULL,
 			subject_concept_id integer NOT NULL,
 			cohort_initiation_date date NULL );
 CREATE TABLE @cdmDatabaseSchema.image_occurrence (
@@ -476,11 +476,11 @@ CREATE TABLE @cdmDatabaseSchema.image_occurrence (
             procedure_occurrence_id integer NOT NULL, 
             visit_occurrence_id integer NULL,
     		anatomic_site_concept_id integer NULL,
-    		wadors_uri varchar(MAX) NULL,
-            local_path varchar(MAX) NULL,
+    		wadors_uri VARCHAR(8000) NULL,
+            local_path VARCHAR(8000) NULL,
             image_occurrence_date date NOT NULL,
-    		image_study_uid varchar(MAX) NOT NULL,
-    		image_series_uid varchar(MAX) NOT NULL,
+    		image_study_uid VARCHAR(8000) NOT NULL,
+    		image_series_uid VARCHAR(8000) NOT NULL,
     		modality_concept_id integer NOT NULL);
 CREATE TABLE @cdmDatabaseSchema.image_feature(
 				image_feature_id integer NOT NULL,
@@ -493,6 +493,6 @@ CREATE TABLE @cdmDatabaseSchema.image_feature(
     			image_finding_concept_id integer NULL,
     			image_finding_id integer NULL,
     			anatomic_site_concept_id integer NULL,
-    			alg_system varchar(MAX) NULL,
+    			alg_system VARCHAR(8000) NULL,
     			alg_datetime timestamp NULL);
 				

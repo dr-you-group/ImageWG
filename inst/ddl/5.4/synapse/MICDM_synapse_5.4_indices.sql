@@ -90,7 +90,6 @@ CREATE INDEX idx_source_to_concept_map_2 ON @cdmDatabaseSchema.source_to_concept
 CREATE INDEX idx_source_to_concept_map_c ON @cdmDatabaseSchema.source_to_concept_map (source_code ASC);
 CREATE CLUSTERED INDEX idx_drug_strength_id_1 ON @cdmDatabaseSchema.drug_strength (drug_concept_id ASC);
 CREATE INDEX idx_drug_strength_id_2 ON @cdmDatabaseSchema.drug_strength (ingredient_concept_id ASC);
-
 /**************************
 Medical Imaging Extension Tables
 ***************************/

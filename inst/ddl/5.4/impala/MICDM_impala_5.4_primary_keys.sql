@@ -12,7 +12,7 @@ ALTER TABLE @cdmDatabaseSchema.observation ADD CONSTRAINT xpk_observation PRIMAR
 ALTER TABLE @cdmDatabaseSchema.note ADD CONSTRAINT xpk_note PRIMARY KEY NONCLUSTERED (note_id);
 ALTER TABLE @cdmDatabaseSchema.note_nlp ADD CONSTRAINT xpk_note_nlp PRIMARY KEY NONCLUSTERED (note_nlp_id);
 ALTER TABLE @cdmDatabaseSchema.specimen ADD CONSTRAINT xpk_specimen PRIMARY KEY NONCLUSTERED (specimen_id);
-ALTER TABLE @cdmDatabaseSchema.location ADD CONSTRAINT xpk_location PRIMARY KEY NONCLUSTERED (location_id);
+ALTER TABLE @cdmDatabaseSchema.`location` ADD CONSTRAINT xpk_location PRIMARY KEY NONCLUSTERED (location_id);
 ALTER TABLE @cdmDatabaseSchema.care_site ADD CONSTRAINT xpk_care_site PRIMARY KEY NONCLUSTERED (care_site_id);
 ALTER TABLE @cdmDatabaseSchema.provider ADD CONSTRAINT xpk_provider PRIMARY KEY NONCLUSTERED (provider_id);
 ALTER TABLE @cdmDatabaseSchema.payer_plan_period ADD CONSTRAINT xpk_payer_plan_period PRIMARY KEY NONCLUSTERED (payer_plan_period_id);
