@@ -1,3 +1,6 @@
+#Local R folders
+/R/
+
 # History files
 .Rhistory
 .Rapp.history
